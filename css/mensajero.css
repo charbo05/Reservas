@@ -1,0 +1,116 @@
+
+/* MENSAJERO ---------------------------------------------------------------------------------------------------- */
+
+#mensajero {
+    position: fixed;
+    top:5px;
+    margin-left: 50%;
+    z-index: 54;
+}
+
+#mensajero .contenedor {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+#mensajero .mensaje {
+    margin-left: -80%;
+}
+
+#mensajero i {
+	float: right;
+	margin-top: -13px;
+	width: 15px;
+	height: 15px;
+	margin-right: -10px;
+    cursor: pointer;
+}
+
+#mensajero h5 {
+    display: block;
+    margin:0;
+    margin-bottom: 5px;
+    margin-left: 75px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#mensajero p {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #444444;
+    margin-left: 75px;
+}
+
+/**/
+
+#mensajero .mensaje div {
+    background-repeat: no-repeat;
+    background-position: -14px -17px;
+    border-width: 0;
+    margin-bottom: 4px;
+    border-width: 4px;
+}
+
+#mensajero div.exito {
+    background-color: rgb(239, 255, 232);
+    background-image: url("../img/mensajero/exito.png");
+    border-color: #9ed79d;
+}
+
+#mensajero div.error {
+    background-color: rgb(255, 232, 232);
+    background-image: url("../img/mensajero/error.png");
+    border-color: #fa9690;
+}
+
+#mensajero div.advertencia {
+    background-color: rgb(255, 255, 232);
+    background-image: url("../img/mensajero/advertencia.png");
+    border-color: #ffd883;
+}
+
+#mensajero div.informacion {
+    background-color: rgb(232, 241, 255);
+    background-image: url("../img/mensajero/informacion.png");
+    border-color: #96aef1;
+}
+
+/**/
+
+#mensajero div.exito i {
+    background-image: url("../img/mensajero/cerrar-exito.png");
+}
+
+#mensajero div.error i {
+    background-image: url("../img/mensajero/cerrar-error.png");
+}
+
+#mensajero div.advertencia i {
+    background-image: url("../img/mensajero/cerrar-advertencia.png");
+}
+
+#mensajero div.informacion i {
+    background-image: url("../img/mensajero/cerrar-informacion.png");
+}
+
+/**/
+
+#mensajero div.exito h5 {
+    color:#3dae3d;
+}
+
+#mensajero div.error h5 {
+    color:#e35959;
+}
+
+#mensajero div.advertencia h5 {
+    color:#dfab42;
+}
+
+#mensajero div.informacion h5 {
+    color: #6f6fdd;
+}

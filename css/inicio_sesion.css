@@ -1,0 +1,54 @@
+/* INICIO SESION ---------------------------------------------------------------------------------------------- */
+
+#inicio-sesion {
+    display: none;
+    width: 355px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#inicio-sesion .contenedor {
+    padding: 50px;
+}
+
+#inicio-sesion h2 {
+    padding-left: 5px;
+}
+
+#inicio-sesion label {
+    width: 60px;
+    margin-bottom: 10px;
+
+}
+
+#inicio-sesion .campo-texto,
+#inicio-sesion .campo-password {
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+#inicio-sesion #usuario-inicio-sesion {
+    background-image: url("../img/iconos/icono_usuario_input.png");
+}
+
+#inicio-sesion #clave-inicio-sesion {
+    background-image: url("../img/iconos/icono_clave_input.png");
+}
+
+#inicio-sesion #boton-inicio-sesion {
+    width: 170px;
+    margin-left: 75px;
+    margin-top: 5px;
+}
+
+#inicio-sesion .enlace {
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    margin-bottom: -10px;
+    text-align: right;
+    padding-right: 23px;
+    display: inline-block;
+    width: 245px;
+    text-decoration: none;
+}

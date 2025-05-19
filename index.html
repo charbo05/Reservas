@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en" class="Todos">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Obligatorio P1</title>
+
+    <link rel="stylesheet" href="css/sitio.css">
+    <link rel="stylesheet" href="css/maquetado.css">
+    <link rel="stylesheet" href="css/inicio_sesion.css">
+    <link rel="stylesheet" href="css/registro_usuario.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/locales.css">
+    <link rel="stylesheet" href="css/mensajero.css">
+    <link rel="stylesheet" href="css/personas_reservas_realizadas.css">
+    <link rel="stylesheet" href="css/personas_reservas_pendientes.css">
+    <link rel="stylesheet" href="css/personas_reservas_finalizadas.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- CABECERA --------------------------------------------------------------------------------------------------------------- -->
+
+    <div id="cabecera">
+
+      <div>
+
+        <h1>Reservas en Locales</h1>
+
+        <div id="panel-inicio-sesion-salir">
+
+          <span id="sesion-nombre-entidad"></span>
+          <span id="sesion-iniciar-cerrar">
+            <a href="javascript:sitio.mostrarPaginaIniciarSesion()">
+              Iniciar Sesión
+            </a>
+          </span>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- MENU ------------------------------------------------------------------------------------------------------------------- -->
+
+    <div id="menu">
+      <div></div>
+    </div>
+
+    <!-- MENSAJERO -------------------------------------------------------------------------------------------------------------- -->
+
+    <div id="mensajero">
+
+    </div>
+
+    <!-- CONTENIDO -------------------------------------------------------------------------------------------------------------- -->
+
+    <div id="contenido">
+
+      <!-- RUTA ----------------------------------------------------------------------------------------------------------------- -->
+
+      <div id="ruta">
+        <ul>
+          <li id="ruta_inicio">
+            <a href="javascript:sitio.mostrarPaginaPricipal()">Página principal</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- PRINCIPAL (PAGINA) --------------------------------------------------------------------------------------------------- -->
+
+      <div id="principal" style="display: none;">
+
+        <h2>Búsqueda de locales</h2>
+
+        <input
+          type="text"
+          class="campo-busqueda busqueda-en-divs"
+          placeholder="Buscar por nombre o tipo de local"
+          data-clase-css-divs="ficha-local"
+        >
+
+        <div class="filtro-busqueda">
+
+          <input type="button" value="Restaurantes">
+          <input type="button" value="Teatros">
+          <input type="button" value="Museos">
+          <input type="button" value="Todos" class="filtro-aplicado">
+
+        </div>
+
+        <div class="fichas-locales">
+
+        </div>
+
+      </div> <!-- Fin principal -->
+
+      <!-- INICIO SESION (PAGINA) ----------------------------------------------------------------------------------------------- -->
+
+      <div id="inicio-sesion" style="display: none;">
+
+        <h2>&raquo; Iniciar sesión</h2>
+
+        <div class="contenedor">
+
+          <form autocomplete="off">
+
+            <!-- USUARIO -->
+            <label for="usuario-inicio-sesion" class="label">
+              Usuario:
+            </label>
+            <input type="text" id="usuario-inicio-sesion" class="campo-texto campo-icono" placeholder="Ingrese el usuario">
+
+            <!-- CLAVE -->
+            <label for="clave-inicio-sesion" class="label">
+              Clave:
+            </label>
+            <input type="password" id="clave-inicio-sesion" class="campo-password campo-icono" placeholder="Ingrese la clave">
+
+            <!-- BOTON -->
+            <input type="button" id="boton-inicio-sesion" class="boton-comun" value="Ingresar">
+
+            <!-- ENLACE -->
+            <a href="javascript:sitio.mostrarPaginaRegistroUsuario()" class="enlace">Registrar nuevo usuario</a>
+
+          </form>
+
+        </div>
+
+      </div> <!-- Fin inicio-sesion -->
+
+      <!-- REGISTRO DE USUARIO (PAGINA) ----------------------------------------------------------------------------------------- -->
+
+      <div id="registro-usuario" style="display: none;">
+
+        <h2>&raquo; Registrar nuevo usuario</h2>
+
+        <div class="contenedor">
+
+          <form autocomplete="off">
+
+            <!-- USUARIO -->
+            <label for="usuario-registro" class="label">
+              Usuario:
+            </label>
+            <input type="text" id="usuario-registro" class="campo-texto campo-icono" placeholder="Ingrese el usuario">
+
+            <!-- NOMBRE -->
+            <label for="nombre-registro" class="label">
+              Nombre:
+            </label>
+            <input type="text" id="nombre-registro" class="campo-texto campo-icono" placeholder="Ingrese el nombre">
+
+            <!-- APELLIDO -->
+            <label for="apellido-registro" class="label">
+              Apellido:
+            </label>
+            <input type="text" id="apellido-registro" class="campo-texto campo-icono" placeholder="Ingrese el apellido">
+
+            <!-- CLAVE -->
+            <label for="clave-registro" class="label">
+              Clave:
+            </label>
+            <input type="password" id="clave-registro" class="campo-password campo-icono" placeholder="Ingrese la clave" autocomplete="false" readonly>
+
+            <!-- REPETIR CLAVE -->
+            <label for="clave-repetir-registro" class="label">
+              Repetir Clave:
+            </label>
+            <input type="password" id="clave-repetir-registro" class="campo-password campo-icono" placeholder="Re-ingrese la clave" autocomplete="false" readonly>
+
+            <div id="aclaracion-formato-clave" style="display: none;">
+              <p><b>Atención:</b> La clave deberá contener</p>
+              <ul>
+                <li>Un largo mínimo de 6 caracteres</li>
+                <li>1 letra mayúscula</li>
+                <li>1 letra minúscula</li>
+                <li>1 número</li>
+              </ul>
+            </div>
+
+
+            <!-- BOTON -->
+            <input type="button" id="boton-registro" class="boton-comun" value="Registrar">
+
+            <!-- ENLACE -->
+            <a href="javascript:sitio.mostrarPaginaIniciarSesion()" class="enlace">Ya tengo un usuario</a>
+
+          </form>
+
+        </div>
+
+      </div> <!-- Fin registro-usuario -->
+
+      <!-- LOCALES (PAGINA) ----------------------------------------------------------------------------------------------------- -->
+
+      <div id="locales" style="display: none;">
+
+        <h2>Administración del Local</h2>
+
+        <h3>Información general</h3>
+        <ul id="locales-informacion"></ul>
+
+        <h3>Configuración de reservas</h3>
+        <ul id="locales-configuracion"></ul>
+
+        <h3>Gestión de reservas pendientes</h3>
+        <div id="locales-gestion-reservas"></div>
+
+        <h3>Información estadística</h3>
+        <div id="locales-informacion-general"></div>
+
+      </div> <!-- Fin locales -->
+
+      <!-- PERSONA - RESERVAS REALIZADAS (PAGINA) ------------------------------------------------------------------------------- -->
+
+      <div id="personas-reservas-realizadas" style="display: none;">
+
+        <h2>Reservas realizadas</h2>
+
+        <input
+          type="text"
+          class="campo-busqueda busqueda-en-divs"
+          placeholder="Buscar por nombre o tipo de local"
+          data-clase-css-divs="ficha-local"
+        >
+
+        <div class="filtro-busqueda">
+
+          <input type="button" value="Restaurantes">
+          <input type="button" value="Teatros">
+          <input type="button" value="Museos">
+          <input type="button" value="Todos" class="filtro-aplicado">
+
+        </div>
+
+        <div class="fichas-locales">
+
+        </div>
+
+      </div> <!-- Fin personas-reservas-realizadas -->
+
+      <!-- PERSONA - RESERVAS PENDIENTES (PAGINA) ------------------------------------------------------------------------------- -->
+
+      <div id="personas-reservas-pendientes" style="display: none;">
+
+        <h2>Reservas pendientes</h2>
+
+        <input
+          type="text"
+          class="campo-busqueda busqueda-en-divs"
+          placeholder="Buscar por nombre o tipo de local"
+          data-clase-css-divs="ficha-local"
+        >
+
+        <div class="filtro-busqueda">
+
+          <input type="button" value="Restaurantes">
+          <input type="button" value="Teatros">
+          <input type="button" value="Museos">
+          <input type="button" value="Todos" class="filtro-aplicado">
+
+        </div>
+
+        <div class="fichas-locales">
+
+        </div>
+
+
+      </div> <!-- Fin personas-reservas-pendientes -->
+
+      <!-- PERSONA - RESERVAS FINALIZADAS (PAGINA) ------------------------------------------------------------------------------ -->
+
+      <div id="personas-reservas-finalizadas" style="display: none;">
+
+        <h2>Reservas finalizadas</h2>
+
+        <input
+          type="text"
+          class="campo-busqueda"
+          placeholder="Buscar por nombre o tipo de local"
+          data-clase-css-divs="ficha-local"
+        >
+
+        <div class="filtro-busqueda">
+
+          <input type="button" value="Restaurantes">
+          <input type="button" value="Teatros">
+          <input type="button" value="Museos">
+          <input type="button" value="Todos" class="filtro-aplicado">
+
+        </div>
+
+        <div class="fichas-locales">
+
+        </div>
+
+
+      </div> <!-- Fin personas-reservas-finalizadas -->
+
+    </div> <!-- Fin contenido -->
+
+    <script src="js/entorno/util.js"> </script>
+    <script src="js/entorno/maquetado.js"> </script>
+    <script src="js/entorno/mensajero.js"> </script>
+    <script src="js/locales.js"> </script>
+    <script src="js/personas.js"> </script>
+    <script src="js/entorno/sesion.js"> </script>
+    <script src="js/usuarios.js"> </script>
+    <script src="js/reservas.js"> </script>
+    <script src="js/entorno/paginas.js"> </script>
+    <script src="js/html/pagina_principal.js"> </script>
+    <script src="js/html/pagina_locales.js"> </script>
+    <script src="js/html/pagina_reservas_pendientes.js"> </script>
+    <script src="js/html/pagina_reservas_realizadas.js"> </script>
+    <script src="js/html/pagina_reservas_finalizadas.js"> </script>
+    <script src="js/sitio.js"> </script>
+
+    <div id="precarga1" style="display: none;"></div>
+    <div id="precarga2" style="display: none;"></div>
+    <div id="precarga3" style="display: none;"></div>
+
+  </body>
+
+</html>

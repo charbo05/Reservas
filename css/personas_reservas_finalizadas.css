@@ -1,0 +1,42 @@
+#personas-reservas-finalizadas {
+    display: none;
+}
+
+
+#personas-reservas-finalizadas .estrellas-puntuacion {
+    border: 2px solid red;
+    border-radius: 13px;
+    display: inline-block;
+    padding: 7px 15px 3px 15px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#personas-reservas-finalizadas .estrellas-puntuacion input {
+
+    width: 25px;
+    height: 25px;
+    border: 0;
+    background-image: url("../img/1estrella_opaca.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+
+#personas-reservas-finalizadas .estrellas-puntuacion input.completa {
+    background-image: url("../img/1estrella.png");
+}
+
+#personas-reservas-finalizadas .ficha-local .tipo,
+#personas-reservas-finalizadas .ficha-local .cupos{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+#personas-reservas-finalizadas #estrellas {
+    display: inline-block;
+}

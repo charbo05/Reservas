@@ -1,0 +1,170 @@
+#locales {
+    display: none;
+}
+
+#locales h3 {
+    border-bottom: 1px dashed rosybrown;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+#locales h3:first-of-type {
+    margin-top: 30px;
+}
+
+#locales h4 {
+    margin-bottom: -10px;
+    padding-left: 10px;
+}
+
+#locales h {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#locales ul#locales-configuracion {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left:35px;
+}
+
+#locales ul#locales-configuracion li {
+    padding: 10px 0;
+}
+
+#locales ul#locales-informacion {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left:35px;
+}
+
+#locales ul#locales-informacion li {
+    padding: 10px 0;
+}
+
+#locales ul#locales-informacion span {
+    color:rgb(71, 71, 71);
+}
+
+#locales ul#locales-informacion .estrellas {
+    display: inline-block;
+    margin: 0 5px;
+    margin-bottom: -5px;
+}
+
+#locales ul#locales-informacion .barra-progreso {
+    font-weight: bolder;
+    margin-bottom: -5px;
+}
+
+#locales .cupos {
+
+    width: 50px;
+    margin-left: 5px;
+
+}
+
+#locales .lista-locales {
+    padding: 20px 0;
+}
+
+#locales .lista-locales table {
+    border-spacing: 5px;
+}
+
+#locales .lista-locales th {
+    text-align: left;
+    color: rgb(83, 83, 83);
+}
+
+#locales .lista-locales th,
+#locales .lista-locales td {
+
+    border-bottom: 1px dashed rgb(134, 134, 134);
+    padding: 5px 40px 10px;
+
+
+}
+
+/* FICHA DE LOCAL ------------------------------------------------------------------------------------------------ */
+
+.ficha-local {
+
+    margin: 0 auto;
+    padding:30px 50px;
+    border-top: 2px dotted #ccc;
+
+}
+
+.ficha-local .imagen {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    background-image: url('../img/locales/fondo.png');
+    border: 5px solid white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 0.85;
+}
+
+.ficha-local .detalles {
+    width: 200px;
+    height: 150px;
+    float: right;
+    width: 670px;
+}
+
+.ficha-local .titulo {
+    font-size: 22px;
+    color:#666;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.ficha-local .tipo {
+
+}
+
+.ficha-local .estrellas {
+    margin:20px 0;
+}
+
+.ficha-local .estrella-inactiva {
+    color: gray;
+}
+
+ficha-local .estrella-activa {
+    color: yellow;
+}
+
+.ficha-local .cupos {
+    width: 50px;
+    text-align: center;
+    height: 20px;
+}
+
+.ficha-local .boton-reservar {
+    background-color: #34b5a8;;
+    color: white;
+    border:1px solid rgba(0, 0, 0, 0.178);
+    border-radius: 5px;
+    padding:5px;
+    cursor: pointer;
+    padding:5px 15px;
+}
+
+.ficha-local .boton-cancelar-reserva {
+    background-color: #ec6363;
+    color: white;
+    border:1px solid rgba(0, 0, 0, 0.178);
+    border-radius: 5px;
+    padding:5px;
+    cursor: pointer;
+    padding:5px 15px;
+}
+
+#locales-informacion-general h4 {
+    margin-bottom: 20px;
+}

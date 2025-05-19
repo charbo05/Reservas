@@ -1,0 +1,83 @@
+.ficha-local {
+    border-bottom: 2px dotted #ccc;
+    border-top: 0;
+}
+
+#personas-reservas-realizadas {
+    display: none;
+}
+
+#personas-reservas-realizadas .destacado {
+    background-color: #deffb9;
+    position: relative;
+    border-radius: 11px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 9px 4px;
+    border-bottom: 0;
+}
+
+#personas-reservas-realizadas .resumen-personal {
+    background-color: white;
+    border: 1px dashed #a9a9a9;
+    padding:10px;
+    border-radius: 7px;
+}
+
+#personas-reservas-realizadas .total-reservas {
+    float: right;
+    margin-top:-50px
+}
+
+
+#personas-reservas-realizadas .porcentaje-mis-reservas {
+    float: right;
+}
+
+#personas-reservas-realizadas #locales-destacados {
+    position: relative;
+}
+
+#personas-reservas-realizadas .solapa-destacado {
+	padding: 10px;
+	background-color: #5EB761;
+	display: inline;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	font-weight: bolder;
+	color: white;
+	padding-left: 45px;
+	padding-right: 20px;
+	background-image: url('../img/iconos/icono_copa.png');
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	text-align: left;
+	z-index: 50;
+	margin-right: 20px;
+	margin-top: -3px;
+	box-shadow: rgba(100, 100, 111, 0.2) 3px 4px 2px 0px;
+}
+
+#personas-reservas-realizadas .estado {
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 1px 10px;
+    border-radius: 5px;
+    color: white;
+    font-style: normal;
+}
+
+#personas-reservas-realizadas .pendiente {
+    background-color: rgb(243, 91, 31);
+}
+
+#personas-reservas-realizadas .finalizada {
+    background-color: rgb(14, 156, 9);
+}
+
+#personas-reservas-realizadas .cancelada {
+    background-color: red;
+}

@@ -1,0 +1,112 @@
+Crear una aplicación para reservar lugares en locales (restaurants, teatros y museos).
+
+- El usuario podrá seleccionar el lugar al que desea asistir y la cantidad de personas que irán.
+- La aplicación permitirá gestionar los cupos junto a otras varias funcionalidades.
+
+- No se manejarán temas relacionados con fechas u horas, ni nada que tenga que ver con agenda.
+
+- Gestión de perfiles:
+
+	Dos tipos de perfiles:
+
+		- Perfil local
+		- Perfil de persona
+
+	Perfil Local
+
+		- Los locales y sus credenciales de acceso a la aplicación ya estarán precargados.
+
+
+		Deberá poder:
+
+			Ingresar en la aplicacción (login)
+				- Usuario y claves ya precargados
+				- En el nombre de usuario no controlar mayúsculas y minúsculas
+				- La contraseña se deberá validar tal cuál el usuario la ingrese
+				- En caso de error mostrar mensaje
+
+			Habilitar y deshabilitar disponibilidad
+				- Poder deshabilitar la posibilidad de hacer reservas
+				- Cada local tendrá un cupo máximo
+				- Cuando se llegue al cupo máximo deshabilitar automáticamente la posibilidad de hacer reservas
+
+			Cambiar las reservas de estado
+				- Cambiar de estado original "Pendiente" a "Finalizada"
+				- Cambios por reserva individual (no múltiples simultaneamente)
+				- Búsqueda por nombre de cliente para poder cambiarle el estado a finalizado
+					- Solo mostrar las que tengan estado "Pendiente"
+					- Si no hay conicidencias mostrar aviso
+					- Mostrar todas las coincidencias que contengas la subcadena de búsqueda
+
+			Modificar el cupo máximo
+				- Solamente si no hay reservas en estado pendiente
+
+			Visualizar información estadística
+				- Porcentaje de ocupacion del local (reservas sobre el cupo total)
+				- Promedio de calificaciones de "su local"
+				- Listado de todos los locales con promedio de calificaciones de cada uno
+				- Total de reservas realizadas hasta el momento (pendientes y finalizadas del local)
+
+	Perfil Persona
+
+		- Las personas se podrán registrar en la aplicación
+
+		- La persona tendrá:
+			- Un número identificador (único)
+			- Nombre
+			- Usuario (único)
+			- Contraseña
+
+		Debera poder:
+
+			Registarse en la aplicación
+
+				- Nombre de usuario:
+					- No se puede repetir:
+						- Con otro nombre de usuario
+						- Con otro nombre de usuario de local
+
+				- Contraseña:
+					- Mínimo de 6 caracteres
+					- Deberá contener por lo menos:
+						- Una mayúscula
+						- Una minúscula
+						- Un número
+
+				- Todos los datos son obligatorios
+
+			Ingresar en la aplicación
+				- En el nombre de usuario no controlar mayúsculas y minúsculas
+				- La contraseña se deberá validar tal cuál el usuario la ingrese
+
+			Realizar la solicitud de una reserva
+				- Indicando el local y cantidad de cupos a reservar
+				- No reservar si el usuario ya tiene reserva en el local
+				- Verificar que el local este habilitado para tomar reservas
+				- Ingresar la reserva en estado "Pendiente"
+
+			Cancelar una reserva
+				- El usuario puede cancelar sus reservas en estado "pendiente"
+				- Al cancelar la reserva pasa estado "cancelada"
+				- Solamente se mostraran las reservas en estado "pendiente"
+
+			Calificar una reserva finalizada
+				- El usuario verá sus reservas finalizadas
+				- El usuario podrá puntuar esas reservas con un valor de 1 a 5
+
+			Ver listado de sus reservas pendientes
+				- Se debera mostrar:
+					- Foto del local
+					- Nombre
+					- Cantidad de cupos
+
+			Visualizar información estadística
+				- Porcentaje de reservas
+					- Listado de locales con reservas que se hayan completado (por el usuario)
+						- Cantidad de reservas que hizo
+						- Total de reservas que tiene ese local
+						- Porcentaje de reservas que corresponden al usuario (en ese local)
+						- No tomar en cuenta los cupos, solo la cantidad de reservas hechas (sin importar el estado)
+					- Ver el local en el que el usuario hizo más reservas
+						- Si en el máximo coinciden más de uno mostrarlos
+						- No importa el estado de la reserva

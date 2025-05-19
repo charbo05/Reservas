@@ -1,0 +1,7 @@
+{
+    "hideComments.defaultEnabled": false,
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
+    }
+}
